@@ -11,7 +11,7 @@ Note: Thinking you may be able to adjust the `bin/build_args.rb` script so the t
 ## Usage
 
     ufo docker compile
-    eval $(bin/build_args.rb)
+    export UFO_DOCKER_BUILD_OPTIONS="$(bin/build_args.rb)"
     ufo docker build
 
 On the `ufo docker build` command you'll see the env vars within the dokce build --build-arg command, something like this:
