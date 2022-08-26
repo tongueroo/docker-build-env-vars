@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+WORKDIR /app
+COPY . .
+# uncomment ARG REBUILD to always force rebuild after ufo docker compile
+# ARG REBUILD=<%= Time.now.to_i %>
+<% if File.exist?('build.env') -%>
+ARG <%= IO.readlines("build.env").map { |l| l.strip.split('=').first.sub(/.*export /,'') }.join(" ") %>
+<% end -%>
+RUN bin/grep_env.sh
+# RUN bin/wrapper.sh bin/test.sh
+# RUN bin/wrapper.sh npm install
+CMD ["bash"]

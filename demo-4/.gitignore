@@ -1,0 +1,5 @@
+.ufo/tmp
+.ufo/log
+.ufo/output
+.secrets
+Dockerfile
