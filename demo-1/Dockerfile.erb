@@ -2,12 +2,8 @@ FROM ubuntu:latest
 WORKDIR /app
 COPY . .
 ARG REBUILD=<%= Time.now.to_i %>
-# <% if File.exist?('build.env') -%>
-# ARG <%= IO.readlines("build.env").map(&:strip).join(" ") %>
-# <% end -%>
-
-ARG FOO7
+<% if File.exist?('build.env') -%>
+ARG <%= IO.readlines("build.env").map(&:strip).join(" ") %>
+<% end -%>
 RUN bin/grep_env.sh
-# RUN bin/wrapper.sh bin/test.sh
-# RUN bin/wrapper.sh npm install
 CMD ["bash"]

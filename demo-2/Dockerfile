@@ -10,7 +10,7 @@ FROM ubuntu:latest
 WORKDIR /app
 COPY . .
 # uncomment to always force rebuild
-# ARG REBUILD=1661542979
+# ARG REBUILD=1661544170
 ARG FOO1 FOO2
 RUN bin/grep_env.sh
 # RUN bin/wrapper.sh bin/test.sh

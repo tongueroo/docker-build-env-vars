@@ -9,11 +9,7 @@
 FROM ubuntu:latest
 WORKDIR /app
 COPY . .
-ARG REBUILD=1661542234
-# # ARG FOO1=bar1 FOO2=bar2
-# 
-ARG FOO7
-RUN bin/test.sh
-# RUN bin/wrapper.sh bin/test.sh
-# RUN bin/wrapper.sh npm install
+ARG REBUILD=1661543766
+ARG FOO1=bar1 FOO2=bar2
+RUN bin/grep_env.sh
 CMD ["bash"]
