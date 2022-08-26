@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 WORKDIR /app
 COPY . .
-# uncomment to always force rebuild
+# uncomment ARG REBUILD to always force rebuild after ufo docker compile
 # ARG REBUILD=<%= Time.now.to_i %>
 <% if File.exist?('build.env') -%>
 ARG <%= IO.readlines("build.env").map { |l| l.strip.split('=').first.sub(/.*export /,'') }.join(" ") %>
