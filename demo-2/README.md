@@ -2,7 +2,7 @@
 
 This compiles a different Dockerfile based on the `build.env` file, but only using the keys. This way the env vars don't show up in `docker history IMAGE`.
 
-It uses the [bin/build.args](bin/build.args) to generate an export command that can be `bash eval` to set UFO_DOCKER_BUILD_OPTIONS
+It uses the [bin/build_args.rb](bin/build_args.rb) to generate an export command that can be `bash eval` to set UFO_DOCKER_BUILD_OPTIONS
 
 Docs: https://ufoships.com/docs/faq/
 
