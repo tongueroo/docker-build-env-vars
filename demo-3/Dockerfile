@@ -11,4 +11,6 @@ WORKDIR /app
 COPY . .
 RUN bin/wrapper.sh bin/grep_env.sh
 # RUN bin/wrapper.sh npm install
+
+# RUN rm build.env # consider removing the build.env at the end
 CMD ["bash"]

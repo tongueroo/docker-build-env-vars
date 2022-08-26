@@ -34,3 +34,5 @@ The `bin/wrapper.sh bin/grep_env.sh` shows that env vars are loaded.
     ++ FOO2=bar2
     + exec bin/grep_env.sh
     grep FOO end
+
+Note, you may want to remove the `build.sh` at the end of the Docker build proccess.
