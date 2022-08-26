@@ -2,3 +2,4 @@
 .ufo/log
 .ufo/output
 .secrets
+Dockerfile
