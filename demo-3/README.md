@@ -3,7 +3,7 @@
 This uses a [bin/wrapper.sh](bin/wrapper.sh) to source build.env before running whatever command you need, IE: npm install.
 
 * The con is that you have to update your Dockerfile RUN instructions.
-* The pro is that you do not have to genreate a Dockerfile dynamically.
+* The pro is that you do not have to generate a Dockerfile dynamically.
 
 
 ## Usage
